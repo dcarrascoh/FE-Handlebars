@@ -14,4 +14,5 @@
 // "components"	"_components.scss"	Components CSS:		Component specific styles, the components will also be implementation specific
 // "nojs"		"_nojs.scss"		No JS allowed:		This is for when a user has js disabled
 
+@import "global";
 @import "components";
