@@ -24,10 +24,11 @@ var app = assemble();
 var paths = {
     src: 'src/',
     build: 'build/',
-    images: 'src/images/**/*'
+    images: 'src/images/**/*',
+    pdf: 'src/pdf/*'
 };
 
-gulp.task('default', ['images', 'compass', 'js', 'assemble'], function() {
+gulp.task('default', ['images', 'compass', 'js', 'pdf', 'assemble'], function() {
 
     browserSync.init({
         server: "./build"
@@ -48,6 +49,9 @@ gulp.task('js-watch', ['js'], browserSync.reload);
 // html watch
 gulp.task('assemble-watch', ['assemble'], browserSync.reload);
 
+// images watch
+gulp.task('images-watch', ['images'], browserSync.reload);
+
 gulp.task('build', ['clean'], function() {
     gulp.run('default');
 });
@@ -64,6 +68,12 @@ gulp.task('images', function() {
         .pipe(imagemin())
         .pipe(gulp.dest(paths.build + 'images'));
 });
+
+gulp.task('pdf', function() {
+    return gulp.src(paths.pdf)
+        .pipe(gulp.dest(paths.build+'pdf'));
+});
+
 
 gulp.task('compass', function() {
     return gulp.src(paths.src + 'scss/styles.scss')
