@@ -1,5 +1,4 @@
 header.header {
-
     h1,
     h2 {
         color: #EDF2F4;
@@ -8,6 +7,22 @@ header.header {
 
     .profile-img {
         border-radius: 50%;
+    }
+
+    nav {
+        text-align: center;
+        background: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    nav a {
+        display: inline;
+        padding: 15px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
 }

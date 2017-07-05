@@ -28,6 +28,10 @@ h2 {
     margin-top: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 a {
     color: #EF233C
 }
@@ -42,24 +46,45 @@ footer {
     color: #8D99AE;
 }
 
+header {
+    padding-top: 50PX;
+    position: relative;
+}
+
 .content-warp {
     max-width: 950px;
     margin: 0 auto;
-    padding: 50px;
-    overflow: auto;
+    padding: 60px 50px;
+    overflow: hidden;
 }
 
 .col-narrow {
     width: 30%;
     float: left;
-    min-height: 175px
 }
 
 .col-wide {
     width: 70%;
     float: left;
     padding-left: 20px;
-    min-height: 175px
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    text-decoration: none;
+    background: #EF233C;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+.download {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 /* Color Palette
